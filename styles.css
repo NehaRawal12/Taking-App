@@ -1,0 +1,149 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  header {
+    padding: 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  #theme-toggle {
+    background: #333;
+    color: #fff;
+  }
+  
+  main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #notes-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    max-width: 800px;
+    justify-content: center;
+  }
+  
+  .note {
+    width: 200px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 10px;
+    transition: transform 0.2s;
+  }
+  
+  .note:hover {
+    transform: scale(1.05);
+  }
+  
+  textarea {
+    border: none;
+    resize: none;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    font-size: 14px;
+    outline: none;
+  }
+  
+  .delete-note {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: #ff4d4d;
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+  }
+  
+  /* Dark Mode */
+  body.dark {
+    background: #121212;
+    color: #fff;
+  }
+  
+  body.dark header {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+  body.dark button {
+    background: #444;
+    color: #fff;
+  }
+  
+  body.dark .note {
+    background: rgba(30, 30, 30, 0.9);
+  }
+  
+
+
+  /* Title Style */
+.note-title {
+    font-size: 1.8rem; /* Default larger font size while typing */
+    font-weight: bold;
+    border: none;
+    width: 100%;
+    margin-bottom: 5px;
+    background: transparent;
+    outline: none;
+    transition: font-size 0.3s;
+}
+
+/* Description Style */
+.note-description {
+    font-size: 1rem; 
+    line-height: 1.5;
+    resize: none;
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    transition: font-size 0.3s;
+}
+
+/* Placeholder color */
+.note-title::placeholder,
+.note-description::placeholder {
+    color: rgba(100, 100, 100, 0.7);
+}
+
+/* Timestamp Style */
+.note-timestamp {
+    font-size: 0.8rem;
+    color: gray;
+    margin-top: 5px;
+    text-align: right;
+    font-style: italic;
+}
